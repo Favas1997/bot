@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+	<title>BB8</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'main.css'%}">
+</head>
+<body>
+<div class="aa_htmlTable">
+	<h3 style="color:white">Users Button Click counts</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Button Stupid</th>
+	  	<th>Button Fat</th>
+        <th>Button Dumb</th>
+      </tr>
+    </thead>
+    <tbody>
+		{% for each in data %}
+			<tr>
+				<td>{{each.Username}}</td>
+				<td>{{each.button_stupid}}</td>
+				<td>{{each.button_fat}}</td>
+				<td>{{each.button_dumb}}</td>
+		  </tr>
+		{% endfor %}
+	</tbody>
+  </table>
+</div>
+
+</body>
+</html>
